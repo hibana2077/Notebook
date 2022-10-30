@@ -2,7 +2,7 @@
  * @Author: error: git config user.name && git config user.email & please set dead value or install git
  * @Date: 2022-10-30 10:58:59
  * @LastEditors: error: git config user.name && git config user.email & please set dead value or install git
- * @LastEditTime: 2022-10-30 22:31:51
+ * @LastEditTime: 2022-10-30 22:53:00
  * @FilePath: \筆記本\freqtrade部屬.md
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -507,6 +507,6 @@ freqtrade hyperopt --hyperopt-loss SharpeHyperOptLoss --spaces buy sell --strate
 
 ## 7. 參考資料
 
+[![frqtrade](https://img.shields.io/badge/freqtrade--44A833?style=plastic&logo=github)](https://github.com/freqtrade/freqtrade)</br>
 [官方文件](https://www.freqtrade.io/en/latest/)</br>
 [策略範例](https://github.com/freqtrade/freqtrade-strategies/blob/main/user_data/strategies/SwingHighToSky.py)</br>
-
