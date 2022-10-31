@@ -2,7 +2,7 @@
  * @Author: error: git config user.name && git config user.email & please set dead value or install git
  * @Date: 2022-10-31 18:02:29
  * @LastEditors: error: git config user.name && git config user.email & please set dead value or install git
- * @LastEditTime: 2022-10-31 20:57:11
+ * @LastEditTime: 2022-10-31 20:58:49
  * @FilePath: \筆記本\Object oriented programming\oop.md
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -14,8 +14,9 @@
 [![openCV](https://img.shields.io/badge/OpenCV--5c3ee8?style=plastic&logo=opencv)](https://opencv.org/)
 [![tensorflow](https://img.shields.io/badge/Tensorflow--ff6f00?style=plastic&logo=tensorflow)](https://www.tensorflow.org/)
 [![jupyter](https://img.shields.io/badge/Jupyter--f37626?style=plastic&logo=jupyter)](https://jupyter.org/)
-[![vscode](https://img.shields.io/badge/VScode--007acc?style=plastic&logo=visual-studio-code)]()
+[![vscode](https://img.shields.io/badge/VScode--007acc?style=plastic&logo=visual-studio-code)](https://code.visualstudio.com/)
 [![markdown](https://img.shields.io/badge/Markdown--000000?style=plastic&logo=markdown)](https://www.markdownguide.org/)
+[![GitHub](https://img.shields.io/badge/GitHub--181717?style=plastic&logo=github)](https://github.com/hibana2077/Notebook/blob/main/Object%20oriented%20programming/oop.md)
 
 ## Python運算
 
