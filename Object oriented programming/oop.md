@@ -436,7 +436,7 @@ print(b.astype(np.float32).dtype) # float32
 arr1 = np.arange(1,13)
 print(arr1) # [ 1  2  3  4  5  6  7  8  9 10 11 12] => Vector
 print(arr1.shape) # (11,)
-print(arr1.reshape(3,4)) # [[ 1  2  3  4] [ 5  6  7  8] [ 9 10 11]] => Matrix
+print(arr1.reshape(3,4)) # [[ 1  2  3  4] [ 5  6  7  8] [ 9 10 11 12]] => Matrix
 print(arr1.reshape(3,4).shape) # (3, 4)
 print(arr1.reshape(3,4).ndim) # 2
 print(arr1.reshape(3,4).size) # 12
