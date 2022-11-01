@@ -2,7 +2,7 @@
  * @Author: error: git config user.name && git config user.email & please set dead value or install git
  * @Date: 2022-10-31 18:02:29
  * @LastEditors: error: git config user.name && git config user.email & please set dead value or install git
- * @LastEditTime: 2022-10-31 20:58:49
+ * @LastEditTime: 2022-11-01 12:55:39
  * @FilePath: \筆記本\Object oriented programming\oop.md
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -436,7 +436,7 @@ print(b.astype(np.float32).dtype) # float32
 arr1 = np.arange(1,13)
 print(arr1) # [ 1  2  3  4  5  6  7  8  9 10 11 12] => Vector
 print(arr1.shape) # (11,)
-print(arr1.reshape(3,4)) # [[ 1  2  3  4] [ 5  6  7  8] [ 9 10 11 12]] => Matrix
+print(arr1.reshape(3,4)) # [[ 1  2  3  4] [ 5  6  7  8] [ 9 10 11]] => Matrix
 print(arr1.reshape(3,4).shape) # (3, 4)
 print(arr1.reshape(3,4).ndim) # 2
 print(arr1.reshape(3,4).size) # 12
@@ -791,6 +791,90 @@ andy.work()
 bob.work()
 ```
 
+***
+
+#### EX1 : MyComplex
+
+```python
+class MyComplex:
+    def __init__(self, real, imag):
+        self.real = real
+        self.imag = imag
+    def __add__(self, other):
+        return MyComplex(self.real + other.real, self.imag + other.imag)
+    def __sub__(self, other):
+        return MyComplex(self.real - other.real, self.imag - other.imag)
+    def __mul__(self, other):
+        return MyComplex(self.real * other.real - self.imag * other.imag, self.real * other.imag + self.imag * other.real)
+        #相乘的公式 a+bi * c+di = (ac-bd) + (ad+bc)i
+    def __str__(self):
+        return f'{self.real} + {self.imag}i'
+
+if __name__ == '__main__':
+    a = MyComplex(3, 2)
+    b = MyComplex(1, 7)
+    print(a + b)
+    print(a - b)
+    print(a * b)
+```
+
+#### EX2 : Point
+
+```python
+class Point:
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+    def __add__(self, other):
+        return Point(self.x + other.x, self.y + other.y)
+    def __sub__(self, other):
+        return Point(self.x - other.x, self.y - other.y)
+    def __str__(self):
+        return f'({self.x}, {self.y})'
+    def distance(self, other):
+        return ((self.x - other.x)**2 + (self.y - other.y)**2)**0.5
+    def __repr__(self) -> str:
+        return f'Point({self.x}, {self.y})'
+
+if __name__ == '__main__':
+    a = Point(1, 2)
+    b = Point(3, 4)
+    print(a + b)
+    print(a - b)
+    print(a.distance(b))
+    print(a)
+    print(b)
+```
+
+#### EX3 : MyVector
+
+```python
+class MyVector:
+    def __init__(self, data:list):
+        self.data = data
+        self.length = len(self.data)
+    def __len__(self) -> int:
+        return self.length
+    def __getitem__(self, index) -> int:
+        return self.data[index]
+    def __str__(self) -> str:
+        return '[' + ' '.join(map(str, self.data)) + ']'
+    def __mul__(self, other):
+        if isinstance(other, MyVector):
+            if self.length != other.length:
+                return 'Cannot multiply vectors of different lengths'
+            return sum([ first*last for first,last in zip(self.data, other.data)])
+        else:
+            return "Cannot multiply vector by non-vector"
+
+v1 = MyVector([1,2,3])
+v2 = MyVector([4,5,6])
+v3 = MyVector([7,8,9,10])
+print(v1*v2)
+print(v1*v3)
+print(v1)
+```
+
 其中考範圍到這裡，下面的範圍應該是期末考範圍。
 
 ***
@@ -924,3 +1008,62 @@ if __name__ == '__main__':
 ***
 到這裡就把物件導向的基礎語法介紹完畢，接下來是教 Tensorflow 的使用，跟實作一些簡單的 classifier 。
 ***
+
+## Tensorflow
+
+### 1. Tensorflow 的簡單介紹
+
+![tensorflow](https://camo.githubusercontent.com/aeb4f612bd9b40d81c62fcbebd6db44a5d4344b8b962be0138817e18c9c06963/68747470733a2f2f7777772e74656e736f72666c6f772e6f72672f696d616765732f74665f6c6f676f5f686f72697a6f6e74616c2e706e67)
+
+>概念：Tensorflow 是一個由 Google 維護的開源機器學習框架，它可以在 CPU、GPU、TPU 上執行，並且可以在多種平台上執行，例如：Linux、Windows、MacOS、Android、iOS。
+
+- Tensorflow 的架構
+
+![Tensorflow](https://i0.wp.com/www.cienciaedados.com/wp-content/uploads/2016/11/Contextview.png?ssl=1)
+
+- Tensorflow 的安裝
+
+  - 系統需求
+
+    - Python 3.5-3.9
+    - macOS 10.12.6 (Sierra) or later (no GPU support)
+    - Ubuntu 16.04 or later
+    - Windows 7 or later
+
+  - 安裝方式
+  
+    - windows
+    
+      - pip
+    
+        ```python
+        pip install tensorflow
+        ```
+    
+    - Linux
+    
+      - pip
+    
+        ```python
+        pip3 install tensorflow
+        ```
+    
+    - MacOS
+    
+      - pip
+    
+        ```python
+        pip3 install tensorflow
+        ```
+
+如果不想安裝，可以使用 Google Colab 來執行程式碼。
+
+[Google Colab](https://colab.research.google.com/notebooks/intro.ipynb)
+
+### 2. Tensorflow 的基本使用
+
+- 引入 Tensorflow
+
+```python
+import tensorflow as tf
+```
