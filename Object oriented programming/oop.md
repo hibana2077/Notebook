@@ -1,8 +1,8 @@
 <!--
  * @Author: error: git config user.name && git config user.email & please set dead value or install git
  * @Date: 2022-10-31 18:02:29
- * @LastEditors: error: git config user.name && git config user.email & please set dead value or install git
- * @LastEditTime: 2022-11-01 12:55:39
+ * @LastEditors: hibana2077 hibana2077@gmaill.com
+ * @LastEditTime: 2023-01-04 11:01:11
  * @FilePath: \筆記本\Object oriented programming\oop.md
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -1004,66 +1004,3 @@ if __name__ == '__main__':
 ```
 
 </br>
-
-***
-到這裡就把物件導向的基礎語法介紹完畢，接下來是教 Tensorflow 的使用，跟實作一些簡單的 classifier 。
-***
-
-## Tensorflow
-
-### 1. Tensorflow 的簡單介紹
-
-![tensorflow](https://camo.githubusercontent.com/aeb4f612bd9b40d81c62fcbebd6db44a5d4344b8b962be0138817e18c9c06963/68747470733a2f2f7777772e74656e736f72666c6f772e6f72672f696d616765732f74665f6c6f676f5f686f72697a6f6e74616c2e706e67)
-
->概念：Tensorflow 是一個由 Google 維護的開源機器學習框架，它可以在 CPU、GPU、TPU 上執行，並且可以在多種平台上執行，例如：Linux、Windows、MacOS、Android、iOS。
-
-- Tensorflow 的架構
-
-![Tensorflow](https://i0.wp.com/www.cienciaedados.com/wp-content/uploads/2016/11/Contextview.png?ssl=1)
-
-- Tensorflow 的安裝
-
-  - 系統需求
-
-    - Python 3.5-3.9
-    - macOS 10.12.6 (Sierra) or later (no GPU support)
-    - Ubuntu 16.04 or later
-    - Windows 7 or later
-
-  - 安裝方式
-  
-    - windows
-    
-      - pip
-    
-        ```python
-        pip install tensorflow
-        ```
-    
-    - Linux
-    
-      - pip
-    
-        ```python
-        pip3 install tensorflow
-        ```
-    
-    - MacOS
-    
-      - pip
-    
-        ```python
-        pip3 install tensorflow
-        ```
-
-如果不想安裝，可以使用 Google Colab 來執行程式碼。
-
-[Google Colab](https://colab.research.google.com/notebooks/intro.ipynb)
-
-### 2. Tensorflow 的基本使用
-
-- 引入 Tensorflow
-
-```python
-import tensorflow as tf
-```
